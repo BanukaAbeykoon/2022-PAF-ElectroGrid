@@ -79,7 +79,7 @@ public class Payment {
 			 {return "Error while connecting to the database for reading."; }
 			 
 		     // Prepare the html table to be displayed
-		     output = "<table border='1'><tr><th>pPayment ID</th><th>Payment Date</th>" +
+		     output = "<table border='1'><tr><th>Payment ID</th><th>Payment Date</th>" +
 					   "<th>Payment Amount</th>" +
 					   "<th>Payment Type</th>" +
 					  
@@ -197,5 +197,77 @@ public class Payment {
 		 }
 		 return output;
 		 }
+		
+		
+		
+		//view profile
+		public String viewProfile(String payid) {
+
+
+			String output = "";
+
+			try {
+				Connection con = connect();
+
+				if (con == null) {
+					return "Error while connecting to the database for reading.";
+				}
+
+				  output = "<table border='1'><tr><th>Payment ID</th><th>Payment Date</th>" +
+						   "<th>Payment Amount</th>" +
+						   "<th>Payment Type</th>" +
+						  
+						   "<th>Payment Customer</th>" +
+						   "<th>Payment Customer ID</th>" +
+						  
+						   "<th>Update</th><th>Remove</th></tr>";
+			     
+
+				String query = "select *  from payment where payid=' " + payid + "'" ;
+
+
+				Statement stmt = con.createStatement();
+
+
+				ResultSet rs = stmt.executeQuery(query);
+
+				 while (rs.next())
+				 {
+					 String payid1 = Integer.toString(rs.getInt("payid"));//see
+					 String paydate = rs.getString("paydate");
+					 String payamt = rs.getString("payamt");
+					 String paytype = rs.getString("paytype");
+					 String paycus = rs.getString("paycus");
+					 String paycusid =rs.getString("paycusid");
+					 
+					
+					 // Add into the html table
+					 output += "<tr><td>" + payid1 + "</td>";
+					 output += "<td>" + paydate + "</td>";
+					 output += "<td>" + payamt + "</td>";
+					 output += "<td>" + paytype + "</td>";
+					 output += "<td>" + paycus + "</td>";
+					 output += "<td>" + paycusid + "</td>";
+				
+					
+
+
+			}
+
+				con.close();
+
+				output += "</table>";
+
+
+			} catch (Exception e) 
+			{
+
+				output = "Error while Viewing the user profile.";
+				System.err.println(e.getMessage());
+			}
+
+			return output;
+		}
+
 
 }
