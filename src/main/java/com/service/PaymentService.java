@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -88,5 +89,19 @@ Payment payobj = new Payment();
 		 String output = payobj.deletePayment(payid);
 		return output;
 		}
+		
+		// search
+		@GET
+		@Path("/profile/{payid}")
+		@Consumes(MediaType.APPLICATION_JSON)
+		@Produces(MediaType.TEXT_PLAIN)
+		//@Produces(MediaType.TEXT_HTML)
+		public String readprofile(@PathParam("payid") String payid) {
+
+			return payobj.viewProfile(payid);
+
+
+		}
+
 
 }
