@@ -213,7 +213,7 @@ public class Admin {
 					return "Error while connecting to the database for reading.";
 				}
 
-				output = "<table border=\"0\"><tr><th>Admin Number</th><th>Admin Name</th><th>Admin Email</th><th>Admin Age</th><th>Password</th><th>phone</th><th>Nic</th><th>Update</th><th>Delete</th></tr>";
+				output = "<table border=\"1\"><tr><th>Admin Number</th><th>Admin Name</th><th>Admin Email</th><th>Admin Age</th><th>Password</th><th>phone</th><th>Nic</th><th>Update</th><th>Delete</th></tr>";
 
 				String query = "select *  from admin where adminNumber=' " + adminNumber + "'" ;
 
