@@ -61,7 +61,7 @@ public class Customer {
 		}
 		 catch (Exception e)
 		 {
-			 output = "Error while inserting the item.";
+			 output = "Error while inserting the Customers.";
 			 System.err.println(e.getMessage());
 		 }
 		    return output;
@@ -131,7 +131,7 @@ public class Customer {
 		   }
 		   catch (Exception e)
 		   {
-			 output = "Error while reading the items.";
+			 output = "Error while reading the Customers.";
 			 System.err.println(e.getMessage());
 		   }
 		   
@@ -166,7 +166,7 @@ public class Customer {
 		 }
 		 catch (Exception e)
 		 {
-		 output = "Error while updating the item.";
+		 output = "Error while updating the Customer.";
 		 System.err.println(e.getMessage());
 		 }
 		 return output;
@@ -194,7 +194,7 @@ public class Customer {
 		 }
 		 catch (Exception e)
 		 {
-		 output = "Error while deleting the item.";
+		 output = "Error while deleting the Customer.";
 		 System.err.println(e.getMessage());
 		 }
 		 return output;
