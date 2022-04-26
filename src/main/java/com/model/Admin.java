@@ -26,7 +26,7 @@ public class Admin {
 	}
 	
 	
-	//Insert Item
+	//Insert Admin Item
 	public String insertAdminDetails(String adminName, String adminEmail, String adminAge, String password, String phone, String nic)
 	{
 		String output = "";
