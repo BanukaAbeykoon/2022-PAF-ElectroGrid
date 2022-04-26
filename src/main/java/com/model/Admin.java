@@ -199,7 +199,7 @@ public class Admin {
 		 return output;
 		 }
 		
-		//serch
+		//serch Admin details
 		
 		public String viewProfile(String adminNumber) {
 
