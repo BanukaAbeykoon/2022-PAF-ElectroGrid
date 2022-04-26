@@ -24,7 +24,7 @@ import com.model.Bill;
 public class BillService {
 Bill billobj = new Bill();
 	
-	//Read Details
+	//Read Bill Details
 		@GET
 		@Path("/")
 		@Produces(MediaType.TEXT_HTML) 
@@ -34,7 +34,7 @@ Bill billobj = new Bill();
 			return billobj.readBill();
 		} 
 	
-	//Add Details
+	//Add Bill Details
 		@POST
 		@Path("/")
 		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -54,7 +54,7 @@ Bill billobj = new Bill();
 		return output;
 		}
 		
-		
+		//Update Bill details
 		@PUT
 		@Path("/")
 		@Consumes(MediaType.APPLICATION_JSON)
