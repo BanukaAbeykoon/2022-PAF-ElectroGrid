@@ -26,7 +26,7 @@ public class Customer {
 	}
 	
 	
-	//Insert Item
+	//Insert Customers
 	public String insertCustomerDetails(String customerName, String customerEmail, String cusAge, String password, String phone, String nic)
 	{
 		String output = "";
@@ -68,7 +68,7 @@ public class Customer {
 	}
 	
 	
-	//Read Item
+	//Read Customers
 		public String readCustomer()
 	    {
 		   String output = "";
@@ -138,7 +138,7 @@ public class Customer {
 		   return output;
 	    }
 		
-		//update
+		//update customers
 		public String updateCustomer(String customerNumber, String customerName, String customerEmail, String cusAge, String password, String phone, String nic)
 		 
 		 {
@@ -162,7 +162,7 @@ public class Customer {
 		 // execute the statement
 		 preparedStmt.execute();
 		 con.close();
-		 output = "Updated successfully";
+		 output = "Customer Updated successfully";
 		 }
 		 catch (Exception e)
 		 {
@@ -173,7 +173,7 @@ public class Customer {
 		 }
 		
 		
-		//delete
+		//delete customer
 		public String deleteCustomer(String customerNumber)
 		 {
 		 String output = "";
@@ -190,7 +190,7 @@ public class Customer {
 		 // execute the statement
 		 preparedStmt.execute();
 		 con.close();
-		 output = "Deleted successfully";
+		 output = "Deleted customer successfully";
 		 }
 		 catch (Exception e)
 		 {
@@ -267,7 +267,7 @@ public class Customer {
 			} catch (Exception e) 
 			{
 
-				output = "Error while Viewing the user profile.";
+				output = "Error while Viewing the customer profile.";
 				System.err.println(e.getMessage());
 			}
 
