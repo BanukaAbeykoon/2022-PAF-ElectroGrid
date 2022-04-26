@@ -198,7 +198,7 @@ public class Bill {
 		 }
 		 return output;
 		 }
-		//view profile
+		//view profile bill(search)
 	
 		public String viewProfile(String billID) {
 
