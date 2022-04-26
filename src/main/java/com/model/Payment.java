@@ -26,7 +26,7 @@ public class Payment {
 	}
 	
 	
-	//Insert Item
+	//Insert Payment
 	public String insertPaymentDetails( String paydate, String payamt, String paytype, String paycus, String paycusid)
 	{
 		String output = "";
