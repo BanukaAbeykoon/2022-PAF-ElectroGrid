@@ -23,7 +23,7 @@ import com.model.Customer;
 public class CustomerService {
 Customer cusobj = new Customer();
 	
-	//Read Details
+	//Read Details of customers
 		@GET
 		@Path("/")
 		@Produces(MediaType.TEXT_HTML) 
@@ -33,8 +33,8 @@ Customer cusobj = new Customer();
 			return cusobj.readCustomer();
 		} 
 	
-	//Add Details
-		@POST
+	//Add Details of customers
+		@POST 
 		@Path("/")
 		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 		@Produces(MediaType.TEXT_PLAIN)
@@ -52,7 +52,7 @@ Customer cusobj = new Customer();
 		return output;
 		}
 		
-		
+		//Update Details of customers
 		@PUT
 		@Path("/")
 		@Consumes(MediaType.APPLICATION_JSON)

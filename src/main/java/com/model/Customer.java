@@ -17,7 +17,7 @@ public class Customer {
 			 Class.forName("com.mysql.jdbc.Driver");
 
 			 //Provide the correct details: DBServer/DBName, username, password
-			 con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/electro", "root", "root");
+			 con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/electro", "root", "root");//electro is the database name and password is root
 		 }
 		 catch (Exception e)
 		 {e.printStackTrace();}
@@ -225,7 +225,7 @@ public class Customer {
 				ResultSet rs = stmt.executeQuery(query);
 
 				while (rs.next()) {
-					 String customerNumber1 = Integer.toString(rs.getInt("customerNumber"));//see
+					 String customerNumber1 = Integer.toString(rs.getInt("customerNumber"));//see the search
 					 String customerName = rs.getString("customerName");
 					 String customerEmail = rs.getString("customerEmail");
 					 String cusAge = rs.getString("cusAge");
