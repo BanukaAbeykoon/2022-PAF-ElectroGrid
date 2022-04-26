@@ -23,7 +23,7 @@ import com.model.Admin;
 public class AdminService {
 	Admin adminobj = new Admin();
 	
-	//Read Details
+	//Read Admin Details
 		@GET
 		@Path("/")
 		@Produces(MediaType.TEXT_HTML) 
@@ -33,7 +33,7 @@ public class AdminService {
 			return adminobj.readAdmin();
 		} 
 	
-	//Add Details
+	//Add Admin Details
 		@POST
 		@Path("/")
 		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
