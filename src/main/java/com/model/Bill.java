@@ -26,7 +26,7 @@ public class Bill {
 	}
 	
 	
-	//Insert Item
+	//Insert bill
 	public String insertBillDetails( String billCode, String cusID, String units, String kwhCharge, String fixCharge, String total )
 	{
 		String output = "";
@@ -68,7 +68,7 @@ public class Bill {
 	}
 	
 	
-	//Read Item
+	//Read bill
 		public String readBill()
 	    {
 		   String output = "";
@@ -137,7 +137,7 @@ public class Bill {
 		   return output;
 	    }
 		
-		//update
+		//update bill
 		public String updateBill(String billID, String billCode, String cusID, String units, String kwhCharge, String fixCharge, String total)
 		 
 		 {
@@ -172,7 +172,7 @@ public class Bill {
 		 }
 		
 		
-		//delete
+		//delete bill
 		public String deleteBill(String billID)
 		 {
 		 String output = "";
